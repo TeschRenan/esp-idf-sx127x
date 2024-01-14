@@ -23,7 +23,7 @@ long lora_get_preamble_length(void);
 void lora_set_sync_word(int sw);
 void lora_enable_crc(void);
 void lora_disable_crc(void);
-int lora_init(void);
+int lora_init(spi_host_device_t host_id, gpio_num_t miso, gpio_num_t mosi, gpio_num_t sck, gpio_num_t cs, gpio_num_t rst );
 void lora_send_packet(uint8_t *buf, int size);
 int lora_receive_packet(uint8_t *buf, int size);
 int lora_received(void);
